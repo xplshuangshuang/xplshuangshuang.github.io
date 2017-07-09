@@ -17,6 +17,7 @@
 				<h3>UserName:<input type="text" name="userName" /></h3> <br /> 
 				<h3>Password: <input type="text" name="passWord" /></h3> <br />
 			<a href="userPage.php" class="button button_login"><span>Go!</span></a>
-    	</div>
+               <a href="userPage.php">HTML Images</a>
+        </div>
     </body>
 </html>
