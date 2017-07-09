@@ -1,27 +1,85 @@
-<<<<<<< HEAD
-hello world again!
-=======
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Shuangshuang</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
 
-<html>
-    <head>
-	<link href="dotaOMG.css" rel="stylesheet" type="text/css" />
-	<script src="textChange.js" type="text/javascript"> </script>
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* Sorry I made some mistake before I left China</span><br />
+				<span class="space"/><span class="comments">* I wish this website will make you happy again</span><br />
+				<span class="space"/><span class="comments">* Somehow, this stupid programming tool doesn't recognize Chinese words.</span><br />
+				<span class="space"/><span class="comments">* Hope you don't feel weird, haha</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Cy"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"XiaoShuangShuang"</span>);<br />
+				i.love(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						ShuangShuang, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Daddy</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Designed by Cy.
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2014, 5, 20);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
 
-	<title>DOTAOMG</title>
-    </head>
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
 
-    <body>
-    	<nav class = "navBar">
-    		<h1>Welcome to DOTAOMG!</h1>
-    	</nav>
-    
-    	<div class = "loginBox">
-				<h3>UserName:<input type="text" name="userName" /></h3> <br /> 
-				<h3>Password: <input type="text" name="passWord" /></h3> <br />
-			<a href="userPage.php" class="button button_login"><span>Go!</span></a>
-               <a href="google.com">HTML Images</a>
-        </div>
-    </body>
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
 </html>
->>>>>>> 59c79e8790190f327c44e6a9fb29c605a7e097f8
