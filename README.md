@@ -1,2 +1,0 @@
-TRY
-S# DotaOverFlow

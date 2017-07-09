@@ -1,4 +1,0 @@
-Name: Chiyu Cheng
-MMR:  8999
-Self-Introduction:
-Hello World!
